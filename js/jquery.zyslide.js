@@ -16,7 +16,7 @@ $(function(){
 	//也就是说只会产生一个轮播图，这个函数的作用域只能分配给一个轮播图
 	//所以要求在调用本函数的时候务必把当前轮播图的根标签传递过来
 	//这里的形参 ele 就是某个轮播图的根标签
-	var slide = function(ele) {
+	var slide = function(ele,options) {
 		//转化为jquery对象
 		var $ele = $(ele);
 		//默认设置选项
@@ -26,6 +26,7 @@ $(function(){
 			//控制 interval 的时间（轮播速度）
 			speed:2000
 		};
+		$.extend(true, setting, options);
 		//规定好每张图片处于的位置和状态
 		var states = [{
 			ZIndex: 1,

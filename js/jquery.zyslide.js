@@ -130,9 +130,9 @@ $(function(){
 		});
 	}		
 	//找到要轮播的轮播图根标签，调用 slide 方法
-	$.fn.zySlide = function(){
+	$.fn.zySlide = function(options){
 		$(this).each(function(i,ele){
-			slide(ele);
+			slide(ele,options);
 		})
 	}
 })(jQuery)
